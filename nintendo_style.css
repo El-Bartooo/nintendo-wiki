@@ -1,0 +1,241 @@
+/*
+//Cloud color: rgb(40, 123, 241)
+//Nintendo red: rgb(228, 0, 15)
+//Nintendo red on hover: rgb(255, 30, 45)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
+    color: black;
+}
+
+header {
+    position: relative;
+    min-height: 200px;
+    background-color: rgb(255, 30, 45);
+    overflow-x: hidden;
+}
+
+#hatter {
+    position: absolute;
+    right: 0;
+    height: 200px;
+    animation-name: hatterslide;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+
+#logo {
+    position: absolute;
+    z-index: 5;
+    min-width: 240px;
+    max-width: 90%;
+    max-height: 160px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-filter: drop-shadow(8px 6px 2px #000);
+    filter: drop-shadow(8px 6px 2px #000);
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.menu_icon {
+    position: absolute;
+    left: 18px;
+    top: 9px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    filter: invert(100%);
+}
+
+.nav {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    background-color: rgb(228, 0, 15);
+    z-index: 5;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0 0;
+}
+
+.nav_listitem {
+    text-align: center;
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    padding: 0.8rem 1rem;
+    width: 200px;
+}
+
+.nav_listitem:hover {
+    background-color: rgb(255, 30, 45);
+}
+
+.nav_listitem:hover ul, .nav_listitem:focus ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav_listitemdrop {
+    position: absolute;
+    top: 3.1rem;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(228, 0, 15);
+}
+
+.nav_listitemdrop li:hover {
+    background-color: rgb(255, 30, 45);
+}
+
+.nav_listitemdrop li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+
+}
+
+main {
+    position: relative;
+    background-color: rgb(40, 123, 241);
+    min-height: 70vh;
+    background-image: url(./sources/clouds_jav.jpg), url(./sources/ground.png);
+    background-size: 25%, 20%;
+    background-repeat: repeat-x, repeat-x;
+    background-position: top left, bottom left;
+}
+
+section {
+    background-image: url(./sources/brick.png);
+    background-repeat: repeat;
+    background-size: 10%;
+    width: 90%;
+    min-height: inherit;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.box {
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin: 20px auto;
+    background-color: rgba(255, 228, 196, 0.9);
+    border-radius: 25px;
+    border: rgb(228, 0, 15) 2px solid;
+    padding: 25px;
+    
+}
+
+.box p {
+    overflow-x: hidden;
+    font-size: 1.2rem;
+}
+
+h1, h2 {
+    color: rgb(228, 0, 15);
+}
+
+p img {
+    float: right;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.leiras {
+    float: left;
+}
+
+p .clearspan {
+    clear: both;
+}
+
+span {
+    position: relative;
+    top: -50px;
+}
+
+footer {
+    background-color: rgb(228, 0, 15);
+    min-height: 150px;
+    position: relative
+}
+
+footer ul {
+    position: absolute;
+    right: 20px;
+}
+
+footer h3 {
+    text-align: right;
+    padding: 10px;
+    color: white;
+}
+
+footer ul li, footer ul li a{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: right;
+}
+
+footer ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+@keyframes hatterslide {
+   from { transform: translateX();}
+   to { transform: translateX(50%); }
+}
+
+@media screen and (min-width: 700px) {
+    section {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    section {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section {
+        width: 66.66%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    section {
+        width: 60%;
+    }
+}
